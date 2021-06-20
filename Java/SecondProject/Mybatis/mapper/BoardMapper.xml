@@ -18,16 +18,6 @@
 		select count(*) from Board
 	</select>
 	
-	<!-- 페이징 -->
-	<select id="selectpage" parameterType="boardVO" resultType="boardVO">
-		select * from (
-				select rownum as rnum, bno, title, content, writer, regdate, viewcnt from (
-						select * from Board order by bno desc
-						) Board
-					)
-		where rnum between #{list[0]} and #{list[1]}
-	</select>
-	
 	<!-- 게시글 상세보기 조회 -->
 	<select id="view" parameterType="boardVO" resultType="boardVO">
 		select * from Board where bno = #{bno}

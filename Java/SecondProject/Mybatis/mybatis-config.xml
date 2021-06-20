@@ -12,11 +12,13 @@
         <typeAlias type="com.mega.project.MainBoardVO" alias="mbVO"></typeAlias>
         <typeAlias type="com.mega.project.MemoryVO" alias="memoVO"></typeAlias>
         <typeAlias type="com.mega.project.GraphicVO" alias="graVO"></typeAlias>
+        <typeAlias type="com.mega.project.BoardVO" alias="boardVO"></typeAlias>
      </typeAliases>
      <mappers>
         <mapper resource="mapper/CPUMapper.xml" />
         <mapper resource="mapper/MainBoardMapper.xml" />      
         <mapper resource="mapper/MemoryMapper.xml" />
         <mapper resource="mapper/GraphicMapper.xml" />
+        <mapper resource="mapper/BoardMapper.xml" />
      </mappers>
 </configuration>

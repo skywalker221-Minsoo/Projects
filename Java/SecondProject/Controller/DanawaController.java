@@ -35,18 +35,6 @@ public class DanawaController {
 	@Autowired
 	BoardDAO dao5;
 	
-	@RequestMapping("pagedata")
-	@ResponseBody
-	public List<BoardVO> selectpage(int page) throws Exception {
-		int start = page * 10 - 9;
-		int end = page * 10;
-		ArrayList<Object> pagelist = new ArrayList<Object>();
-		pagelist.add(start);
-		pagelist.add(end);
-		List<BoardVO> list = dao5.readpage(pagelist);
-		return list;
-	}
-	
 	@RequestMapping("boardcount")
 	@ResponseBody
 	public int selectall() throws Exception {

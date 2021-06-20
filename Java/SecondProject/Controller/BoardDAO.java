@@ -19,6 +19,4 @@ public interface BoardDAO {
 	public void increaseViewcnt(int bno) throws Exception;
 	//7. 게시글 전체 데이터 수 가져오기
 	public int readall() throws Exception;
-	//8. 페이징
-	public List<BoardVO> readpage(ArrayList<Object> pagelist) throws Exception;
 }

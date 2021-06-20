@@ -56,11 +56,4 @@ public class BoardDAOImpl implements BoardDAO {
 	public int readall() {
 		return SqlSession.selectOne("board.selectall");
 	}
-
-	//8. ÆäÀÌÂ¡
-	@Override
-	public List<BoardVO> readpage(ArrayList<Object> pagelist) {
-		List<BoardVO> list = SqlSession.selectList("board.selectpage", pagelist);
-		return list;
-	}
 }
